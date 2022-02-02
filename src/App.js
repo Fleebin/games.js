@@ -1,11 +1,10 @@
 import react from "react";
+import { Home } from '../src/pages/Home/index'
 
-function App() {
+export const App = () => {
   return (
     <>
-      <h1>Hello!</h1>
+      <Home />
     </>
   );
 }
-
-export default App;
