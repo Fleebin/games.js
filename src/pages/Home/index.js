@@ -45,13 +45,15 @@ export const Home = () => {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    {name}
+                                    <Link to={`/interna/${id}`}>
+                                        {name}
+                                    </Link>
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
                     </Card>
                 ))}
             </Box>
-        </Container>
+        </Container >
     );
 }
