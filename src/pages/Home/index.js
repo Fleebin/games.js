@@ -35,18 +35,18 @@ export const Home = () => {
                     gridTemplateColumns: 'repeat(3, 1fr)',
                 }}
             >
-                {games.map(({ name, background_image, id }) => (
-                    <Card sx={{ maxWidth: 345 }} key={id}>
+                {games.map((game) => (
+                    <Card sx={{ maxWidth: 345 }} key={game.id}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"
                                 height="140"
-                                image={background_image}
+                                image={game.background_image}
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <Link to={`/interna/${id}`}>
-                                        {name}
+                                    <Link to={`/interna/${game.id}`}>
+                                        {game.name}
                                     </Link>
                                 </Typography>
                             </CardContent>
