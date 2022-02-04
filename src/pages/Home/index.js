@@ -9,9 +9,11 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import { useStyles } from './styles';
 
 export const Home = () => {
-    const [games, setGames] = useState([])
+    const [games, setGames] = useState([]);
+    const classes = useStyles();
 
     useEffect(() => {
         api.get("/games?key=b9ef1e48ead6447e94f27518a2c2f3e1")
@@ -32,8 +34,9 @@ export const Home = () => {
                     display: 'grid',
                     columnGap: 4,
                     rowGap: 3,
-                    gridTemplateColumns: 'repeat(3, 1fr)',
+                    gridTemplateColumns: 'repeat(4, 2fr)',
                 }}
+                className={classes.head}
             >
                 {games.map((game) => (
                     <Card sx={{ maxWidth: 345 }} key={game.id}>
